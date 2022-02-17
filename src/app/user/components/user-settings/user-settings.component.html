@@ -1,0 +1,13 @@
+<div class="settings flex">
+  <aside class="settings-navbar">
+    <h2 class="settings-navbar__heading">Account settings</h2>
+    <nav class="settings-navbar__item-group">
+      <a [routerLink]="['/user/:id/profile/edit']" routerLinkActive="settings-navbar__item--active" class="settings-navbar__item" [ngClass]="{'settings-navbar__item--active': this.url === 'edit', '': this.url !== 'edit'}" (click)="getUrl()">Edit profile</a>
+      <a [routerLink]="['/user/:id/profile/password']" routerLinkActive="settings-navbar__item--active" class="settings-navbar__item" (click)="getUrl()">Change password</a>
+      <a [routerLink]="['/user/:id/profile/cancel']" routerLinkActive="settings-navbar__item--active" class="settings-navbar__item" (click)="getUrl()">Close account</a>
+    </nav>
+  </aside>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

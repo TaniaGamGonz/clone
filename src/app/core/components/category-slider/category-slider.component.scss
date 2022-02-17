@@ -1,0 +1,54 @@
+@import "../../../../scss/partials/variables";
+@import "../../../../scss/partials/rem";
+
+
+
+.slider {
+  display: flex;
+  align-content: center;
+  height: 50px;
+  text-transform: uppercase;
+
+  &::after {
+    content: '';
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2612395299916842) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 0 8px 0 29px;
+    flex: 0 0 auto;
+    margin-top: 16px;
+
+    &:first-of-type .slider__link {
+      padding-right: 29px;
+      padding-left: 6px;
+      border-right: 1px solid $grey2;
+    }
+
+    &:last-of-type .slider__link {
+      margin-right: 60px;
+    }
+  }
+
+  &__text {
+    padding-bottom: 14px;
+    padding-top: 14px;
+    color: $grey5;
+  }
+
+  &__link {
+    &:hover .slider__text {
+      color: $dark2;
+      font-weight: 500;
+      border-bottom: 3px solid $color-submit;
+    }
+  }
+}
+.no-select{
+  user-select: none;
+}

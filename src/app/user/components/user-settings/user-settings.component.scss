@@ -1,0 +1,122 @@
+@import "../../../../scss/partials/rem";
+@import "../../../../scss/partials/variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.settings {
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: $grey1;
+
+  &-navbar {
+
+    &__heading {
+      display: none;
+    }
+
+    &__item-group {
+      display: flex;
+      width: 100%;
+      padding: rem(0 5px);
+      background-color: $grey6;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      height: rem(38px);
+      padding: rem(0 10px);
+      font-size: rem(13px);
+      font-weight: 500;
+      color: $white;
+
+      &--active {
+        background-color: $grey8;
+      }
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+
+    &-navbar {
+
+      &__item-group {
+        display: flex;
+        width: 100%;
+        padding: rem(35px 32px 0);
+        background-color: transparent;
+      }
+
+      &__item {
+        height: rem(31px);
+        border-radius: $radius;
+        padding: rem(0 15px);
+        background-color: $grey6;
+        font-size: rem(15px);
+
+        &+& {
+          margin-left: rem(8px);
+        }
+
+        &--active {
+          background-color: $grey8;
+        }
+      }
+    }
+
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    padding: rem(70px 0 0 34px);
+
+    &-navbar {
+      margin-right: rem(140px);
+
+      &__heading {
+        display: inherit;
+        margin-bottom: rem(34px);
+        font-family: roboto-slab;
+        font-size: rem(24px);
+        font-weight: 700;
+        color: $dark2;
+      }
+
+      &__item-group {
+        flex-direction: column;
+        width: auto;
+        padding: 0;
+      }
+
+      &__item {
+        display: inherit;
+        height: inherit;
+        padding: 0;
+        background-color: transparent;
+        font-size: rem(16px);
+        font-weight: 300;
+        text-decoration: underline;
+        color: $dark;
+
+        &+& {
+          margin-top: rem(14px);
+          margin-left: 0;
+        }
+
+        &:hover {
+          font-weight: 500;
+          text-decoration: none;
+        }
+
+        &--active {
+          font-weight: 500;
+        }
+      }
+
+    }
+  }
+}

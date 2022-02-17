@@ -1,0 +1,35 @@
+<div class="main">
+  <div class="container container--flex">
+    <div class="container__back" *ngIf="isVisible" (click)="backClicked()">
+      <button class="icon icon--back" >
+        <span class="icon__back">&times;</span>
+      </button>
+      <p class="text-back"> Back to list </p>
+    </div>
+    <div class="container__logo">
+      <h1 [routerLink]="['/home']" routerLinkActive="router-link-active" class="h1 h1--logo">/clone</h1>
+      <app-search *ngIf="_router.url != '/home'" ></app-search>
+    </div>
+    <button class="navbar__toggler" type="button">
+      <a href="#navbar" class="navbar__hamburger"></a>
+    </button>
+
+    <div class="container__user">
+      <button class="icon icon--upload">
+        <svg class="icon__upload" alt="Upload">
+          <use xlink:href="/assets/sprite.svg#upload"></use>
+        </svg>
+      </button>
+      <button class="icon icon--bell" (click)="openDropdownHeader()">
+        <svg class="icon__bell" alt="Bell">
+          <use xlink:href="/assets/sprite.svg#bell"></use>
+        </svg>
+      </button>
+      <app-header-dropdown *ngIf="isDropdownHeaderOpen"></app-header-dropdown>
+      <img class="pic-user" [routerLink]="['/user/:id']" routerLinkActive="router-link-active">
+
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="user-header">
+  <div class="user-header__image-field">
+    <img class="user-header__image" src="./assets/images/avatar.png" alt="Avatar">
+  </div>
+  <div class="user-header__info">
+    <div class="user-header__heading">
+      <h2 class="user-header__name">Kelly Kruger</h2>
+      <div class="user-header__btn-group">
+        <a [routerLink]="['/user/:id/profile']" class="btn user-header__btn user-header__btn--edit">
+          <svg alt="Edit profile">
+            <use xlink:href="./assets/sprite.svg#pencil"></use>
+          </svg>
+          <span>Edit profile</span>
+        </a>
+        <div class="dropdown" (clickOutside)="isDropdownUserOpen ? closeDropdownUser() : false">
+          <button class="btn user-header__btn user-header__btn--options" (click)="openDropdownUser()">
+            <svg alt="User options">
+              <use xlink:href="./assets/sprite.svg#dots"></use>
+            </svg>
+          </button>
+          <app-user-header-dropdown *ngIf="isDropdownUserOpen"></app-user-header-dropdown>
+        </div>
+      </div>
+    </div>
+    <p class="user-header__description">Download free, beautiful high-quality photos curated by Kelly.</p>
+  </div>
+</div>

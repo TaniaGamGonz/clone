@@ -1,0 +1,13 @@
+<div class="header-dropdown">
+  <span class="list">Notifications</span>
+  <ul>
+    <li class="list-user" *ngFor="let user of users">
+      <a [routerLink]="['user', '']" routerLinkActive="active" class="list-user__name">
+        @pepitoflores {{user.name}}
+      </a>
+      <span class="list-user__item">ha empezado a seguirte</span>
+    </li>
+  </ul>
+</div>
+
+

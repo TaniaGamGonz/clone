@@ -1,0 +1,51 @@
+@import '../../../../scss/partials/rem';
+@import '../../../../scss/partials/variables';
+
+:host {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .search {
+
+
+    &::before {
+      position: absolute;
+      content: url('src/assets/svg/m-glass.svg');
+      width: 1rem;
+      height: 1rem;
+      z-index: 100;
+      left: rem(17px);
+      top: calc(50% - 8px);
+      margin-right: 26px;
+    }
+
+    &__control {
+      padding: rem(0px 4px 0px 43px);
+      width: rem(325px);
+      height: rem(40px);
+      border-radius: rem(5px);
+      border-style: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .search{
+    &__control {
+      width: 462px;
+
+    }
+  }
+}
+
+

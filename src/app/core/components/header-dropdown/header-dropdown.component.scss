@@ -1,0 +1,43 @@
+@import "../../../../scss/partials/rem";
+@import "../../../../scss/partials/variables";
+
+:host {
+  position: absolute;
+  top: rem(70px);
+  right: rem(118px);
+  z-index: 100;
+
+}
+
+.header-dropdown {
+  min-width: auto;
+  border: rem(1px) solid $grey3;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem(13px);
+  line-height: rem(15px);
+}
+
+.list {
+  display: flex;
+  border-bottom: rem(1px) solid $grey3;
+  padding: rem(14px 130px 13px 13px);
+  background-color: $white;
+  font-family: $roboto;
+  font-size: rem(13px);
+  line-height: rem(15px);
+
+  &-user {
+    width: 100%;
+    padding: rem(13px 14px);
+    text-align: left;
+
+    &__name {
+      color: $color-submit;
+    }
+  }
+}

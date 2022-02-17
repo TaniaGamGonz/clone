@@ -1,0 +1,56 @@
+// Variables
+
+// Colors
+$color-danger: #e02020;
+$color-submit: #0091ff;
+$color-success: #00e685;
+
+$dark: #000000;
+$dark1: #2e2e2e;
+$dark2: #4a4a4a;
+
+$grey1: #f2f2f2;
+$grey2: #dddddd;
+$grey3: #cad3df;
+$grey4: #bbbbbb;
+$grey5: #a5a5a5;
+$grey6: #a9a9a9;
+$grey7: #999999;
+$grey8: #8a8a8a;
+
+$color-primary: $dark1;
+
+$white: rgba(255, 255, 255, 1);
+$white-darkened: rgba(255, 255, 255, 0.6);
+
+// Border radius
+$radius: 5px;
+$radius-round: 50%;
+
+// Fonts
+$roboto: 'Roboto',
+sans-serif;
+$roboto-slab: 'Roboto Slab',
+serif;
+
+$font-family-standard: $roboto;
+
+$font-size-xxxl: 28px;
+$font-size-xxl: 24px;
+$font-size-xl: 22px;
+$font-size-l: 19px;
+$font-size-m: 16px;
+$font-size-s: 14px;
+$font-size-xs: 13px;
+
+$font-size-default: $font-size-m;
+
+
+//BreakPoints
+$tablet: rem(768px);
+$desktop: rem(1024px);
+
+//title
+$h1-size: 34px;
+$h1-size-movile: 24px;
+$h2-size: 40px;

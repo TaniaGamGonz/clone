@@ -1,0 +1,63 @@
+@import "../../../../scss/partials/rem";
+@import "../../../../scss/partials/variables";
+@import "../../../../scss/partials/mixins";
+
+/* ----Mobile first---- */
+
+.signup__btn {
+    width: 100%;
+}
+
+.back-to-signup {
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: $tablet) {
+    .form__field {
+        display: flex;
+        .form-group:nth-of-type(2) {
+            margin-left: 20px;
+        }
+    }
+    .signup {
+        &__btn {
+            width: 310px;
+        }
+        .back-to-signup {
+            margin-left: 15px;
+            margin-top: 0;
+        }
+        .btn-group {
+            display: flex;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .signup {
+        &__btn {
+            width: 310px;
+        }
+        .back-to-signup {
+            margin-left: 15px;
+            margin-top: 0;
+        }
+        .btn-group {
+            display: flex;
+        }
+    }
+}
+
+.user-links {
+    text-decoration-line: underline;
+}
+
+.h1 {
+    font-size: 34px;
+    font-weight: bold;
+    font-family: $roboto-slab;
+    margin-bottom: 29px;
+}

@@ -1,0 +1,8 @@
+@mixin form-control($stroke: $grey3, $borderRadius: $radius) {
+    width: 100%;
+    height: rem(40px);
+    border: rem(1px) solid $stroke;
+    border-radius: $borderRadius;
+    outline: none;
+    padding-left: rem(16px);
+}

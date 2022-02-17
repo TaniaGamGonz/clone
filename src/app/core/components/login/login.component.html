@@ -1,0 +1,39 @@
+<div class="error flex" *ngIf="showError" (click)="closeError()">
+    <p class="error__text">Invalid email or password.</p>
+    <svg class="error__close">
+    <use xlink:href="/assets/svg/sprite-login.svg#close-error"></use>
+  </svg>
+</div>
+<div class="login flex">
+    <div class="login__column">
+        <div *ngIf="isRegistered; else isNoRegistered">
+            <h1 class="h1">/clone</h1>
+            <form #login="ngForm" class="form form--login" action="...">
+                <div class="form-group">
+                    <label class="form-group__label" for="mail">Email</label>
+                    <input [(ngModel)]="userLog.mail" (input)="mail" name="mail" #mail="ngModel" class="form-group__control" id="mail" type="email" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label class="form-group__label" for="pswd">Password</label>
+                    <input [(ngModel)]="userLog.password" (input)="password" name="password" #password="ngModel" class="form-group__control" id="pswd" type="password" required minlength="6">
+                </div>
+                <div class="btn-group">
+                    <button type="submit" (click)="checkErrorStatus(mail, password)" class="btn login__btn">LOG IN</button>
+                    <div class="back-to-signup flex">
+                        <span>or <a (click)="isNotRegistered()" class="login__link">SIGN UP</a></span>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <ng-template #isNoRegistered>
+            <app-signup (backToLogin)="isNotRegistered()"></app-signup>
+        </ng-template>
+    </div>
+    <div class="login__column">
+        <!-- IMAGEN -->
+    </div>
+</div>
+
+<!-- fin login.component -->

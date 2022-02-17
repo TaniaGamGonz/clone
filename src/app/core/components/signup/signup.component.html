@@ -1,0 +1,35 @@
+<div class="signup">
+    <h1 class="h1">Sign up for /clone</h1>
+    <form #signup="ngForm" class="form form-sign" action="...">
+        <div class="form__field">
+            <div class="form-group">
+                <label [ngClass]="{'form-group__label--error':signup.submitted && firstName.invalid}" class="form-group__label form-group__label--signup" for="firstName">First name</label>
+                <input [(ngModel)]="user.firstName" name="firstName" #firstName="ngModel" [ngClass]="{'form-group__control--error':signup.submitted && firstName.invalid}" class="form-group__control form-group__control--name" type="text" id="firstName" required>
+            </div>
+            <div class="form-group">
+                <label [ngClass]="{'form-group__label--error':signup.submitted && lastName.invalid}" class="form-group__label form-group__label--signup" for="surname">Last name</label>
+                <input [(ngModel)]="user.lastName" name="lastName" #lastName="ngModel" [ngClass]="{'form-group__control--error':signup.submitted && lastName.invalid}" class="form-group__control form-group__control--name" type="text" id="surname" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label [ngClass]="{'form-group__label--error':signup.submitted && mail.invalid}" class="form-group__label form-group__label--signup" for="mail">Email address</label>
+            <input [(ngModel)]="user.mail" name="mail" #mail="ngModel" [ngClass]="{'form-group__control--error':signup.submitted && mail.invalid}" class="form-group__control" id="mail" type="email" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
+                required>
+        </div>
+        <div class="form-group">
+            <label [ngClass]="{'form-group__label--error':signup.submitted && userName.invalid}" class="form-group__label form-group__label--signup" for="name">User name <span>(only letters, numbers and
+          underscores)</span></label>
+            <input [(ngModel)]="user.userName" name="userName" #userName="ngModel" pattern="^[a-zA-Z0-9_\\]+$" [ngClass]="{'form-group__control--error':signup.submitted && userName.invalid}" class="form-group__control" type="text" id="name" required>
+        </div>
+        <div class="form-group">
+            <label [ngClass]="{'form-group__label--error':signup.submitted && password.invalid}" class="form-group__label form-group__label--signup" for="pswd">Password <span>(min. 6 char)</span></label>
+            <input [(ngModel)]="user.password" name="password" #password="ngModel" [ngClass]="{'form-group__control--error':signup.submitted && password.invalid}" class="form-group__control" id="pswd" type="password" required minlength="6">
+        </div>
+        <div class="btn-group">
+            <button type="submit" class="btn signup__btn">SIGN UP</button>
+            <div class="back-to-signup flex">
+                <span>or <a (click)="returnToLogin()" class="user-links">LOG IN</a></span>
+            </div>
+        </div>
+    </form>
+</div>

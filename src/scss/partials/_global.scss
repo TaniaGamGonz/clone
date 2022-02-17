@@ -1,0 +1,105 @@
+@import "rem";
+
+// Global
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*::placeholder {
+  color: $grey8;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: $roboto;
+  font-size: 16px;
+  color: $dark;
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  width: rem(310px);
+  border: 1px solid transparent;
+  border-radius: $radius;
+  padding: rem(14px 0);
+  background-color: $color-submit;
+  color: $white;
+  font-size: rem(15px);
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-appearance: none;
+
+  &--danger {
+    background-color: $color-danger;
+  }
+
+  &--img {
+    background-color: rgba($dark, .5);
+    padding: rem(13px) rem(12px) rem(8px);
+
+    &+& {
+      margin-left: 1px;
+    }
+  }
+}
+
+.pic-user {
+  width: rem(40px);
+  height: rem(40px);
+  margin-left: rem(37px);
+  background-image: url("src/assets/images/avatar.jpg");
+  border-radius: $radius-round;
+
+  &--sm {
+    display: inline-block;
+    width: rem(35px);
+    height: rem(35px);
+    margin: 0;
+    margin-right: rem(8px);
+    background-image: none;
+  }
+}
+
+
+.dropdown {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+//title
+
+.h1 {
+  font-size: $h1-size;
+}
+
+.h1-movile {
+  font-size: $h1-size-movile;
+}
+
+.h2 {
+  font-size: $h2-size;
+}

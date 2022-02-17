@@ -1,0 +1,124 @@
+@import '../../../../scss/partials/rem';
+@import '../../../../scss/partials/variables';
+
+.home-search {
+  background-image: url('/assets/img/Rectangle.jpg');
+  background-size: cover;
+  height: rem(345px);
+  background-position: center;
+  color: $white;
+  padding: rem(104px) rem(19px) 0 rem(14px);
+
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: 400;
+  }
+
+  &__info {
+    font-size: $font-size-s;
+    font-weight: 500;
+
+    &--regular {
+      font-weight: 400;
+      display: block;
+    }
+  }
+
+  &__form {
+    padding-top: 28px;
+    padding-bottom: 20px;
+  }
+}
+
+
+@media screen and (min-width: rem(768px)) {
+  .home-search {
+    background-image: url('/assets/img/Rectangle.jpg');
+    background-size: cover;
+    height: rem(515px);
+    background-position: center;
+    color: $white;
+    padding: rem(78px) rem(34px) 0 rem(34px);
+
+    &__title {
+      font-size: $font-size-xxxl;
+      font-weight: 400;
+
+      &::before {
+        content: "/clone";
+        font-size: rem(60px);
+        font-weight: 700;
+        display: block;
+        padding-bottom: rem(13px);
+      }
+
+      &::after {
+        content: "105.530 images related to weather";
+        font-size: $font-size-l;
+        display: block;
+        margin-top: rem(9px);
+      }
+    }
+
+    &__info {
+      font-size: $font-size-s;
+      font-weight: 500;
+
+      &--regular {
+        font-weight: 400;
+        display: inline-block;
+      }
+    }
+
+    &__form {
+      padding-top: rem(31px);
+      padding-bottom: rem(20px);
+    }
+  }
+}
+
+
+@media screen and (min-width: rem(1024px)) {
+  .home-search {
+    background-image: url('/assets/img/Rectangle.jpg');
+    background-size: cover;
+    height: rem(676px);
+    background-position: center;
+    color: $white;
+    padding: rem(130px) rem(268px) 0 rem(232px);
+
+    &__title {
+      font-size: $font-size-xxxl;
+      font-weight: 400;
+
+      &::before {
+        content: "/clone";
+        font-size: rem(60px);
+        font-weight: 700;
+        display: block;
+        padding-bottom: rem(13px);
+      }
+
+      &::after {
+        content: "105.530 images related to weather";
+        font-size: $font-size-l;
+        display: block;
+        margin-top: rem(9px);
+      }
+    }
+
+    &__info {
+      font-size: $font-size-s;
+      font-weight: 500;
+      &--regular {
+        font-weight: 400;
+        display: inline-block;
+      }
+    }
+
+    &__form {
+      padding-top: rem(31px);
+      padding-bottom: rem(20px);
+    }
+  }
+}

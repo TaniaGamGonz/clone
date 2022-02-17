@@ -1,0 +1,15 @@
+<div class="site" *ngIf="isLogged; else isNoLogged">
+  <header class="site__header">
+    <app-header></app-header>
+  </header>
+  <main class="site__main">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
+<ng-template #isNoLogged>
+  <app-login></app-login>
+</ng-template>
+
+
+

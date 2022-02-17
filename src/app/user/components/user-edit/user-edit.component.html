@@ -1,0 +1,38 @@
+<article>
+  <form #userEditForm="ngForm" (ngSubmit)="onSubmit()" class="user-edit">
+    <h3 class="user-edit__heading">Edit profile</h3>
+    <div class="flex user-edit__group">
+      <div class="form-group form-group--avatar">
+        <img src="./assets/images/avatar.png" alt="Avatar" class="form-group__media">
+        <button>
+          <svg alt="Change profile image">
+            <use xlink:href="./assets/sprite.svg#pencil"></use>
+          </svg>
+          <span>Change profile image</span>
+        </button>
+      </div>
+      <div class="main-data">
+        <div class="form-group">
+          <label for="userFirstName" class="form-group__label">First name</label>
+          <input type="text" id="userFirstName" class="form-group__control form-group__control--profile" name="name" [(ngModel)]="user.firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="userLastName" class="form-group__label">Last name</label>
+          <input type="text" id="userLastName" class="form-group__control form-group__control--profile" name="lastname" [(ngModel)]="user.lastName" required>
+        </div>
+        <div class="form-group">
+          <label for="userEmail" class="form-group__label">Email address</label>
+          <input type="email" id="userEmail" class="form-group__control form-group__control--profile" name="email" [(ngModel)]="user.mail" #email="ngModel" email
+          required>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="userName" class="form-group__label">Username <span>(only letters, numbers, and
+          underscores)</span></label>
+      <input type="text" id="userName" class="form-group__control form-group__control--profile" name="username" [(ngModel)]="user.userName" required>
+      <p class="form-group__text">https://clone.com/<span>{{user.userName}}</span></p>
+    </div>
+    <button type="submit" class="btn user-edit__btn" [disabled]="!userEditForm.valid">Update account</button>
+  </form>
+</article>

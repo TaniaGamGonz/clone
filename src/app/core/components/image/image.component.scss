@@ -1,0 +1,119 @@
+@import '../../../../scss/partials/rem';
+@import '../../../../scss/partials/variables';
+
+
+:host{
+    position: relative;
+  }
+  .img__gallery{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .picture__info{
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+
+      
+     :host:nth-of-type(4n){
+        grid-row: span 2;
+      }
+     :host:nth-of-type(5n){
+        grid-row: span 4;
+        grid-column: span 2;
+      }
+     :host:nth-of-type(6n){
+        grid-row: span 3;
+        grid-column: span 3;
+      }
+     :host:nth-of-type(7n){
+        grid-column: span 2;
+      }
+     :host:nth-of-type(8n){
+        grid-row: auto;
+      }
+    
+    .picture__info{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      opacity: 0;
+      transition: opacity 0.2s;
+  
+      &:hover{
+        opacity: 1;
+      }
+      &-user{
+        display: flex;
+        padding: rem(14px);
+  
+      }
+    }
+    .name{
+      color: $white;
+      font-size: $font-size-s;
+      &--picture{
+        font-weight: 300;
+  
+      }
+    }
+    .info-group{
+      padding-top: rem(9px);
+    }
+    .svg{
+      &--zoom,
+      &--download{
+        color: $white;
+      }
+      &--zoom{
+        align-self: center;
+      }
+    }
+    .group-btn{
+      align-self: flex-end;
+    }
+  
+  
+  }
+  
+  @media screen and (min-width: 1024px) {
+        
+     :host{
+        cursor: pointer;
+      }
+  
+     :host:nth-of-type(4n){
+        grid-row: auto;
+      }
+  
+     :host:nth-of-type(5n){
+        grid-row: span 4;
+        grid-column: span 2;
+      }
+     :host:nth-of-type(6n){
+        grid-column: auto;
+      }
+     :host:nth-of-type(7n){
+        grid-row: span 3;
+        grid-column: span 3;
+      }
+     :host:nth-of-type(8n){
+        grid-column: span 2;
+      }
+     :host:nth-of-type(14n){
+        grid-column: auto;
+      }
+    
+  
+  }
+  
+  
+  

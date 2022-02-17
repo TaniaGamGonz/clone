@@ -1,0 +1,115 @@
+@import "../../../../scss/partials/rem";
+@import "../../../../scss/partials/variables";
+@import "../../../../scss/partials/mixins";
+
+/* mobile first */
+
+.login {
+    flex-direction: column;
+    &__column {
+        &:nth-of-type(1) {
+            margin: 23px 15px;
+        }
+        &:nth-of-type(2) {
+            height: 261px;
+            background-image: url("/assets/images/group.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 50% 70%;
+        }
+    }
+    &__link {
+        text-decoration-line: underline;
+        &--forgot {
+            margin-top: rem(8px);
+        }
+    }
+    &__btn {
+        width: 100%;
+        margin-top: 15px;
+    }
+    .back-to-signup {
+        margin-top: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .login {
+        flex-direction: column;
+        &__column {
+            &:nth-of-type(1) {
+                margin: 60px 74px;
+            }
+            &:nth-of-type(2) {
+                height: 591px;
+                background-image: url("/assets/images/group.jpg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: 50% 70%;
+            }
+        }
+        &__link {
+            text-decoration-line: underline;
+            &--forgot {
+                margin-top: rem(8px);
+            }
+        }
+        &__btn {
+            width: rem(310px);
+            margin: rem(22px 20px 0 0);
+        }
+        .back-to-signup {
+            display: inline-block;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .login {
+        flex-direction: row-reverse;
+        &__column {
+            flex-basis: 50%;
+            &:nth-of-type(1) {
+                margin: 97px 50px;
+            }
+            &:nth-of-type(2) {
+                height: 100vh;
+                background-image: url("/assets/images/group.jpg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+        }
+    }
+}
+
+.h1 {
+    font-size: 34px;
+    font-weight: bold;
+    font-family: $roboto-slab;
+    margin-bottom: 29px;
+}
+
+.error {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background-color: $color-danger;
+    align-items: center;
+    justify-content: center;
+    &__text {
+        display: inline-block;
+        color: #fff;
+    }
+    &__close {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        width: 26px;
+        height: 26px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+}

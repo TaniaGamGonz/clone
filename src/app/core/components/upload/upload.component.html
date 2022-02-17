@@ -1,0 +1,175 @@
+<div class="container-upload">
+
+  <h1 class="h1 upload--h1">Upload your images</h1>
+
+  <div class="upload upload--dragdrop">
+
+    <image-upload [max]="3" [extensions]="['jpeg', 'jpg', 'png', 'svg']" [headers]="{Authorization: 'MyToken'}"
+      [class]="'drag-and-drop'" buttonCaption="+" dropBoxMessage="Drop your image here or Browse">
+    </image-upload> <!-- [url]="'my-url.com'" -->
+
+  </div>
+
+  <div class=" upload upload--gallery flex">
+
+    <div class="upload-card">
+      <div class="upload-card__image"></div>
+      <div class="upload-card__item upload-card__item--title">
+        <input class="form__control" id="title" type="text" required placeholder="Title...">
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns upload-card__item--dropdowns-categories">
+        <angular2-multiselect [data]="categories" [(ngModel)]="selectedItems" name="categories"
+          [settings]="dropdownSettings" required>
+        </angular2-multiselect>
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns  upload-card__item--dropdowns-tags">
+        <angular2-multiselect [data]="tags" [(ngModel)]="selectedItems2" name="tags" [settings]="dropdownSettings2"
+          required>
+        </angular2-multiselect>
+      </div>
+    </div>
+
+    <div class="upload-card">
+      <div class="upload-card__image"></div>
+      <div class="upload-card__item upload-card__item--title">
+        <input class="form__control" id="title" type="text" required placeholder="Title...">
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns upload-card__item--dropdowns-categories">
+        <angular2-multiselect [data]="categories" [(ngModel)]="selectedItems" name="categories"
+          [settings]="dropdownSettings" required>
+        </angular2-multiselect>
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns  upload-card__item--dropdowns-tags">
+        <angular2-multiselect [data]="tags" [(ngModel)]="selectedItems2" name="tags" [settings]="dropdownSettings2"
+          required>
+        </angular2-multiselect>
+      </div>
+    </div>
+
+    <div class="upload-card">
+      <div class="upload-card__image"></div>
+      <div class="upload-card__item upload-card__item--title">
+        <input class="form__control" id="title" type="text" required placeholder="Title...">
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns upload-card__item--dropdowns-categories">
+        <angular2-multiselect [data]="categories" [(ngModel)]="selectedItems" name="categories"
+          [settings]="dropdownSettings" required>
+        </angular2-multiselect>
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns  upload-card__item--dropdowns-tags">
+        <angular2-multiselect [data]="tags" [(ngModel)]="selectedItems2" name="tags" [settings]="dropdownSettings2"
+          required>
+        </angular2-multiselect>
+      </div>
+    </div>
+
+
+
+    <div class="upload-card">
+      <div class="upload-card__image"></div>
+      <div class="upload-card__item upload-card__item--title">
+        <input class="form__control" id="title" type="text" required placeholder="Title...">
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns upload-card__item--dropdowns-categories">
+        <angular2-multiselect [data]="categories" [(ngModel)]="selectedItems" name="categories"
+          [settings]="dropdownSettings" required>
+        </angular2-multiselect>
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns  upload-card__item--dropdowns-tags">
+        <angular2-multiselect [data]="tags" [(ngModel)]="selectedItems2" name="tags" [settings]="dropdownSettings2"
+          required>
+        </angular2-multiselect>
+      </div>
+    </div>
+
+    <div class="upload-card">
+      <div class="upload-card__image"></div>
+      <div class="upload-card__item upload-card__item--title">
+        <input class="form__control" id="title" type="text" required placeholder="Title...">
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns upload-card__item--dropdowns-categories">
+        <angular2-multiselect [data]="categories" [(ngModel)]="selectedItems" name="categories"
+          [settings]="dropdownSettings" required>
+        </angular2-multiselect>
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns  upload-card__item--dropdowns-tags">
+        <angular2-multiselect [data]="tags" [(ngModel)]="selectedItems2" name="tags" [settings]="dropdownSettings2"
+          required>
+        </angular2-multiselect>
+      </div>
+    </div>
+
+
+    <div class="upload-card">
+      <div class="upload-card__image"></div>
+      <div class="upload-card__item upload-card__item--title">
+        <input class="form__control" id="title" type="text" required placeholder="Title...">
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns upload-card__item--dropdowns-categories">
+        <angular2-multiselect [data]="categories" [(ngModel)]="selectedItems" name="categories"
+          [settings]="dropdownSettings" required>
+        </angular2-multiselect>
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns  upload-card__item--dropdowns-tags">
+        <angular2-multiselect [data]="tags" [(ngModel)]="selectedItems2" name="tags" [settings]="dropdownSettings2"
+          required>
+        </angular2-multiselect>
+      </div>
+    </div>
+
+
+    <div class="upload-card">
+      <div class="upload-card__image"></div>
+      <div class="upload-card__item upload-card__item--title">
+        <input class="form__control" id="title" type="text" required placeholder="Title...">
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns upload-card__item--dropdowns-categories">
+        <angular2-multiselect [data]="categories" [(ngModel)]="selectedItems" name="categories"
+          [settings]="dropdownSettings" required>
+        </angular2-multiselect>
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns  upload-card__item--dropdowns-tags">
+        <angular2-multiselect [data]="tags" [(ngModel)]="selectedItems2" name="tags" [settings]="dropdownSettings2"
+          required>
+        </angular2-multiselect>
+      </div>
+    </div>
+
+
+    <div class="upload-card">
+      <div class="upload-card__image"></div>
+      <div class="upload-card__item upload-card__item--title">
+        <input class="form__control" id="title" type="text" required placeholder="Title...">
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns upload-card__item--dropdowns-categories">
+        <angular2-multiselect [data]="categories" [(ngModel)]="selectedItems" name="categories"
+          [settings]="dropdownSettings" required>
+        </angular2-multiselect>
+      </div>
+
+      <div class="upload-card__item upload-card__item--dropdowns  upload-card__item--dropdowns-tags">
+        <angular2-multiselect [data]="tags" [(ngModel)]="selectedItems2" name="tags" [settings]="dropdownSettings2"
+          required>
+        </angular2-multiselect>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>

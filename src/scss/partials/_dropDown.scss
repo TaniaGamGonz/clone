@@ -1,0 +1,23 @@
+.myclass {
+  font-size: 16px;
+
+  & .c-btn {
+    outline: 0;
+    border: 1px solid grey;
+  }
+
+  & .selected-list .c-list .c-token {
+    background-color: grey;
+    color: black;
+  }
+
+  &.custom-class.ng-valid.ng-touched:not(form) {
+    border: 1px solid black;
+  }
+
+  & .selected-list .c-btn {
+    background-color: white;
+    border-radius: 0rem;
+    border: 1px solid white;
+  }
+}

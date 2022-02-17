@@ -1,0 +1,191 @@
+@import '../../../../scss/partials/rem';
+@import '../../../../scss/partials/variables';
+
+.main {
+  margin: 0 auto;
+  background-color: $dark1;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: rem(17px 15px);
+  height: rem(57px);
+
+
+  &--flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    color: $white;
+    font-family: $roboto-slab;
+    align-items: center;
+  }
+
+  &__user {
+    display: none;
+    cursor: pointer;
+  }
+
+  &__back{
+    display: flex;
+    align-items: center;
+    color: $white;
+  }
+
+  .text-back{
+    font-size: $font-size-s;
+  }
+}
+
+.h1--logo{
+  margin-right: rem(28px);
+  cursor: pointer;
+  outline: none;
+}
+
+/* BackTo Icon */
+
+.icon {
+
+  &:hover svg {
+    color: $white;
+  }
+
+  // &--back {
+  //   font-size: 18px;
+
+  // }
+
+  &__back {
+    font-size: 20px;
+    color: $white;
+    cursor: pointer;
+  }
+
+}
+
+
+
+
+/* Hamburguer */
+
+.navbar__toggler {
+  background-color: transparent;
+  color: $white;
+  border: 0;
+  -webkit-appearance: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__hamburger,
+.navbar__hamburger::before,
+.navbar__hamburger::after {
+  display: inline-block;
+  width: rem(29px);
+  height: rem(3px);
+  background-color: $white;
+}
+
+.navbar__hamburger {
+  position: relative;
+}
+
+.navbar__hamburger::before,
+.navbar__hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.navbar__hamburger::before {
+  top: -9px;
+}
+
+.navbar__hamburger::after {
+  top: 9px;
+}
+
+
+@media screen and (min-width: $tablet) {
+
+  .container {
+
+    height: rem(90px);
+    padding: rem(21px 35px);
+
+
+    &__logo {
+      display: flex;
+      color: $white;
+      font-family: $roboto-slab;
+
+    }
+
+    &__user {
+      display: flex;
+      align-items: center;
+
+    }
+
+    &__back {
+      display: none;
+    }
+  }
+
+  .hi--logo {
+    margin-right: rem(28px);
+    cursor: pointer;
+    outline: none;
+    font-size: rem(34px);
+    align-items: center;
+    line-height: rem(19px);
+  }
+
+
+  .search--header {
+    width: 100px;
+  }
+
+  .icon {
+
+    &:hover svg {
+      color: $white;
+    }
+
+    &--bell {
+      margin-left: rem(29px);
+    }
+
+    &__upload {
+      width: rem(36px);
+      height: rem(25px);
+      color: $white-darkened;
+      cursor: pointer;
+    }
+
+    &__bell {
+      width: rem(25px);
+      height: rem(25px);
+      color: $white-darkened;
+      cursor: pointer;
+    }
+  }
+
+  .navbar__toggler {
+    display: none;
+  }
+}
+
+@media screen and (min-width: rem(1024px)) {
+
+
+  .logo__header {
+    margin-right: rem(195px);
+  }
+
+}

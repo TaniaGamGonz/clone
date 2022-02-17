@@ -1,0 +1,8 @@
+<drag-scroll
+class="slider" scrollbar-hidden="true">
+  <li drag-scroll-item class="slider__item no-select"  *ngFor="let category of categories">
+    <a routerLink='/home' routerLinkActive="active" class="slider__link">
+      <span class="slider__text">{{category.name}}</span>
+    </a>
+  </li>
+</drag-scroll>

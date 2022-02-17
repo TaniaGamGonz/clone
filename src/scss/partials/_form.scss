@@ -1,0 +1,50 @@
+@import "mixins";
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 18px;
+
+  &__label {
+    span {
+      color: $grey8;
+    }
+
+    margin-bottom: rem(8px);
+
+    &--error {
+      color: $color-danger;
+    }
+
+    &--signup {
+      font-weight: 500;
+
+      span {
+        color: $dark;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__control {
+    @include form-control;
+
+    &--error {
+      border-color: $color-danger;
+    }
+
+    &--profile {
+      border-color: transparent;
+    }
+  }
+
+  &__text {
+    margin-top: rem(8px);
+    color: $grey8;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}

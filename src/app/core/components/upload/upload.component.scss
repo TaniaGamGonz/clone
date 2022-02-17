@@ -1,0 +1,54 @@
+@import '../../../../scss/partials/rem';
+@import '../../../../scss/partials/variables';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.container-upload {
+  background-color: $grey1;
+  padding: 0 34px;
+  flex-grow: 1;
+  padding-top: 61px;
+}
+
+.upload {
+
+  &-card {
+    width: rem(269px);
+    height: rem(285px);
+    margin-right: 8px;
+    margin-bottom: 43px;
+
+    &__image {
+      width: 100%;
+      height: rem(167px);
+      object-fit: cover;
+      object-position: 50% 35%;
+      background-color: pink;
+      background-image: url('../../../../assets/img/mountain.jpg');
+      background-position: center;
+      background-size: 100%;
+    }
+  }
+
+  &--gallery {
+    display: grid;
+    padding: 1rem;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.upload-card__item .form__control {
+  width: 100%;
+  font-size: 13px;
+  padding: 10px;
+  border: 1px solid white;
+}
+
+.upload-card__item--dropdowns-categories {
+  margin: 8px 0;
+}
